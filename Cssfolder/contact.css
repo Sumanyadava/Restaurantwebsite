@@ -1,0 +1,302 @@
+:root{
+    --pcol: rgb(11,19,21);
+    --scol: rgba(201, 171, 129, 0.4) ;
+    --tcol: #715B3E;
+    --bscol:rgb(199,169,127);
+    --seff:rgba(201, 171, 129) ;
+
+    --pfonts:metropolis1920regular;
+    --sfonts:mono;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+
+    margin-right: 100px;
+    padding: 0;
+    background-color: var(--pcol);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back{
+    /* background-color: var(--scol); */
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    display: flex;
+    z-index: 5;
+    justify-content:space-between;
+    
+}
+
+.lines{
+    height: 150%;
+    width: 1px;
+    background-color: rgba(201, 171, 129, 0.2);
+}
+
+.back>.lines:nth-child(1),:nth-child(6){
+    height: 150%;
+    width: 1px;
+    z-index: 5;
+    background-color: var(--scol);
+}
+
+.all{
+    height: 100vh;
+    width: 100%;
+}
+ 
+/* ---------------nav  */
+
+/* --nav  ---------------------  */
+.nav{
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 10;
+    border-bottom: 1px solid var(--scol);
+}
+.logo{
+    height: 100%;
+    width: 10%;
+    position: relative;
+    right: 5%;
+    background-image: url(../resources/images/uncle-1.png);
+    background-repeat: no-repeat;
+    background-size:70%;
+    background-position: center;
+    background-color: transparent;
+}
+
+nav{
+    height: 100%;
+    width: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: #C9AB81; */
+}
+nav>ul{
+    height: 100%;
+    width: 100%;
+
+    list-style: none;
+    
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    font-family: "Open Sans Condensed",sans-serif; 
+    color: white;
+    
+}
+nav>ul>li>a::after{
+    content: " ";
+    width: 0px;
+    height: 1px;
+
+    margin-bottom: 5px;
+
+    display: block;
+    transition: .2s ease-in;
+    background-color: var(--seff);
+}
+nav>ul>li::after{
+    content: " ";
+    width: 0px;
+    height: 1px;
+
+    
+    display: block;
+    transition: .5s ease-in;
+    color: #715B3E;
+    background-color: var(--seff);
+}
+
+nav>ul>li>a:hover::after{
+    width: 100%;
+}
+nav>ul>li:hover::after{
+    width: 100%;
+}
+
+.active::after{
+    width: 100%;
+}
+
+nav>ul>li>a:hover::after{
+    width: 100%;
+    
+}
+
+
+
+
+.main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.main>h6{
+    font-size: 30px;
+    text-align: center;
+    margin-top: 1%;
+    color: aliceblue; 
+}
+.main>h3{
+    height: 12vh;
+    width: 100%;
+    font-size: 100px;
+    text-align: center;
+    color: var(--seff);
+    /* background-color: aliceblue; */
+}
+.content{
+    height: 70vh;
+    width: 100%;
+    /* background-color: antiquewhite; */
+}
+form{
+    height: 100%;
+    width: 80%;
+    margin-left: 10%;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: rgb(161, 101, 22); */
+}
+input{
+    height: 6vh;
+    width: 80%;
+    color: white;
+    background-color: transparent;
+    border: 2px solid var(--seff);
+}
+#area{
+    height: 30vh;
+    width: 80%;
+    color: white;
+    background-color: transparent;
+    border: 2px solid var(--seff);
+}
+
+#sub{
+    width: 20%;
+    transition: 0.5s ease;
+    
+
+}
+#sub:hover{
+    transform: scale(1.2);
+    box-shadow: 0 8px 8px 2px var(--scol);
+}
+
+
+
+
+
+.p{
+    position: absolute;
+    top: 30%;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* --footer --------- */
+.footer{
+    height: 40vh;
+    /* background-color: aliceblue; */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fullogo{
+    height: 50%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: antiquewhite; */
+}
+.fullogo>.logo{
+    background-size: 100%;
+}
+.name{
+    color: rgb(117,118,48);
+    font-size: 50px;
+}
+footer{
+    height: 50%;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    /* background-color: aqua; */
+}
+.foot{
+    
+    height: 30%;
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    /* background-color: aquamarine; */
+}
+.foot>h3{
+    font-size: 30px;
+    transform: translateY(-40px);
+    color: var(--bscol);
+}
+
+.line::after{
+    content: " ";
+    width: 0px;
+    height: 1px;
+    
+    display: block;
+    transition: 0.6s ease-in;
+    background-color: var(--seff);
+}
+.main:hover>.line::after{
+    width: 100%;
+}

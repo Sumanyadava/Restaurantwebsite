@@ -1,0 +1,395 @@
+:root{
+    --pcol: rgb(11,19,21);
+    --scol: rgba(201, 171, 129, 0.4) ;
+    --tcol: #715B3E;
+    --bscol:rgb(199,169,127);
+    --seff:rgba(201, 171, 129) ;
+
+    --pfonts:metropolis1920regular;
+    --sfonts:mono;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+
+    margin-right: 100px;
+    padding: 0;
+    background-color: var(--pcol);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back{
+    /* background-color: var(--scol); */
+    height: 100%;
+    width: 80%;
+    position: absolute;
+    display: flex;
+    z-index: 5;
+    justify-content:space-between;
+    
+}
+
+.lines{
+    height: 450%;
+    width: 1px;
+    background-color: rgba(201, 171, 129, 0.2);
+}
+
+.back>.lines:nth-child(1),:nth-child(6){
+    height: 450%;
+    width: 1px;
+    z-index: 5;
+    background-color: var(--scol);
+}
+
+.all{
+    height: 100vh;
+    width: 100%;
+}
+ 
+/* ---------------nav  */
+
+/* --nav  ---------------------  */
+.nav{
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    z-index: 10;
+    border-bottom: 1px solid var(--scol);
+}
+.logo{
+    height: 100%;
+    width: 10%;
+    position: relative;
+    right: 5%;
+    background-image: url(../resources/images/uncle-1.png);
+    background-repeat: no-repeat;
+    background-size:70%;
+    background-position: center;
+    background-color: transparent;
+}
+
+nav{
+    height: 100%;
+    width: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: #C9AB81; */
+}
+nav>ul{
+    height: 100%;
+    width: 100%;
+
+    list-style: none;
+    
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+a{
+    text-decoration: none;
+    font-family: "Open Sans Condensed",sans-serif; 
+    color: white;
+    
+}
+nav>ul>li>a::after{
+    content: " ";
+    width: 0px;
+    height: 1px;
+
+    margin-bottom: 5px;
+
+    display: block;
+    transition: .2s ease-in;
+    background-color: var(--seff);
+}
+nav>ul>li::after{
+    content: " ";
+    width: 0px;
+    height: 1px;
+
+    
+    display: block;
+    transition: .5s ease-in;
+    color: #715B3E;
+    background-color: var(--seff);
+}
+
+nav>ul>li>a:hover::after{
+    width: 100%;
+}
+nav>ul>li:hover::after{
+    width: 100%;
+}
+
+.active::after{
+    width: 100%;
+}
+
+nav>ul>li>a:hover::after{
+    width: 100%;
+    
+}
+
+
+
+
+.main{
+    height: 380vh;
+    width: 100%;
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column; */
+}
+
+.foodcard{
+    height: 70%;
+    width: 18%;
+    background-image: url(../resources/images/kajsndvgbh.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+}
+
+.signature{
+    height: 70vh;
+    width: 80%;
+    margin-left: 10%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* background-color: aliceblue; */
+}
+.signature>h3{
+    height: 30%;
+    width: 100%;
+    font-size: 100px;
+    text-align: center;
+    color: var(--scol);
+    /* background-color: rgb(0, 131, 246); */
+}
+
+.alldishes{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+.rest{
+    height: 220vh;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 16rem;
+    padding-left: 1rem;
+    display: grid;
+    grid-template-columns: repeat(4,23%);
+    grid-template-rows: repeat(4,33%);
+    grid-row-gap: 5rem;
+    grid-column-gap: 1.5rem;
+    /* background-color: aliceblue; */
+}
+.rest>h1{
+    position: absolute;
+    top: 100%;
+    left: 38%;
+
+    color: var(--seff);
+    font-size: 100px;
+}
+.rest>.s{
+    position: absolute;
+    top: 180%;
+    left: 35%;
+}
+.rest>.t{
+    position: absolute;
+    top: 264%;
+    left: 37%;
+}
+.rest>.dish{
+    height: 50vh;
+    width: 100%;
+}
+.food{
+    height: 80%;
+    /* background-image: url(../resources/images/01.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.dish>.text{
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    background-color: var(--scol);
+}
+.text>a{
+    padding: 2%;
+    background-color: wheat;
+    color: black;
+    font-style: oblique;
+}
+
+/* ----------------------copy here----------------  */
+.signature{
+    height: 70vh;
+    width: 80%;
+    margin-left: 10%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* background-color: aliceblue; */
+}
+.signature>h3{
+    height: 20%;
+    width: 100%;
+    font-size: 80px;
+    text-align: center;
+    color: var(--seff);
+    /* background-color: rgb(0, 131, 246); */
+}
+
+.signature>.ss{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* background-color: rgb(255, 255, 255); */
+}
+.signature>.ss>.singcard{
+    height: 100%;
+    width: 30%;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+    /* background-image: url(../resources/images/kajsndvgbh.jpg); */
+    /* background-repeat: no-repeat;
+    background-size: contain;
+    
+}  
+
+/* .signature>.carousel>.carousel-cell{} */
+
+.signature>.carousel>.carousel-cell::before{
+    display: block;
+    content: '';
+}
+
+
+.singcard>.name{
+    font-family: fantasy;
+    color: #715B3E;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --footer --------- */
+.footer{
+    height: 40vh;
+    /* background-color: aliceblue; */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fullogo{
+    height: 50%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: antiquewhite; */
+}
+.fullogo>.logo{
+    background-size: 100%;
+}
+.name{
+    color: rgb(117,118,48);
+    font-size: 50px;
+}
+footer{
+    height: 50%;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    /* background-color: aqua; */
+}
+.foot{
+    
+    height: 30%;
+    width: 30%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    /* background-color: aquamarine; */
+}
+.foot>h3{
+    font-size: 30px;
+    transform: translateY(-40px);
+    color: var(--bscol);
+}
+
+.line::after{
+    content: " ";
+    width: 0px;
+    height: 1px;
+    
+    display: block;
+    transition: 0.6s ease-in;
+    background-color: var(--seff);
+}
+.main:hover>.signature>.line::after{
+    width: 100%;
+}
+.rest:hover>.line::after{
+    width: 100%;
+}

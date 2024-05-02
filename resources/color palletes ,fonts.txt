@@ -1,0 +1,24 @@
+
+
+rgb(11,19,21) 
+
+#C9AB81 
+both primary 
+
+715B3E 
+small order now 
+
+
+fonts
+ metropolis1920regular - 300
+Josefin Sans - 600
+
+Open Sans Condensed" - 300
+
+Open Sans Condensed" - 300
+
+caviar_dreamsbold - 700
+caviar_dreamsbold - 100
+Miniver - 400
+Josefin Sans - 300
+caviar_dreamsbold - 600

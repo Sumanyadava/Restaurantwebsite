@@ -1,0 +1,87 @@
+<?php
+require_once('config.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Cssfolder/Contact.css">
+    <title>Contact US</title>
+</head>
+
+<body>
+    <div class="p">
+        <?php
+        // checking if clicked or not 
+        if (isset($_POST['create'])) {
+            echo 'user clicked';
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+            $message = $_POST['message'];
+            // displaying all 
+            echo " " .$name." ".$email." ".$message;
+            $insert = "INSERT INTO users (fname,email,message) VALUES ('$name','$email','$message')";
+            
+            if($conn->query($insert) === TRUE){
+                echo " sucessfully inserted";
+            }else{
+                echo " not inserted";
+            }
+        }
+        ?>
+    </div>
+    <div class="back">
+        <div class="lines"></div>
+        <div class="lines"></div>
+        <div class="lines"></div>
+        <div class="lines"></div>
+        <div class="lines"></div>
+        <div class="lines"></div>
+    </div>
+    <div class="all">
+        <div class="nav">
+            <div class="logo"></div>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#" class="active">Contact US</a></li>
+                    <li><a href="./dishesh.html">Dishes</a></li>
+                    <!-- <li><a href="#">Book a table</a></li> -->
+                    <li><a href="./about.html">About Us </a></li>
+                    <li><a href="./index.html">Home </a></li>
+
+                </ul>
+            </nav>
+            <div class="empt"></div>
+        </div>
+        <div class="main">
+            <h6>Write to us</h6>
+            <h3 class="line">Contact US</h3>
+            <div class="content">
+                <form action="#" method="POST">
+                    <input type="text" name="name" id="" placeholder="Name">
+                    <input type="email" name="email" id="" placeholder="Email">
+                    <textarea  placeholder="write your Message" name="message" id="area" cols="30" rows="10" ></textarea>
+                    <input type="submit" name="create" value="SEND" id="sub">
+                </form>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="fullogo">
+                <div class="logo"></div>
+                <div class="name">SumanTeam</div>
+            </div>
+            <footer>
+                <div class="foot"><h4>Privacy Policy</h4>  <h4>Terms & Conditions</h4></div>
+                <div class="foot"><h3>Opening Hours</h3><h4>12:00 PM to 3:30 PM</h4>
+                <h4> 7:00 PM to 12:00 AM</h4></div>
+                <div class="foot"><h4> +91 7366928995 </h4>
+                <h4> TeamBca@dsms.in</h4></div>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>
